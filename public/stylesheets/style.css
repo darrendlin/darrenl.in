@@ -87,10 +87,16 @@ a {
   text-align: center;
   vertical-align: top;
   margin: 50px;
+  width: 320px;
 }
 
 .summary-item:last-of-type {
   margin-right: 100px;
+}
+
+.school-years {
+  font-weight: bold;
+  font-size: 17px;
 }
 
 .summary-item img {
@@ -99,13 +105,24 @@ a {
   border-radius: 50%;
 }
 
-.summary-item .school-degrees ul {
-  text-align: left;
+.school-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.school-location {
+  font-size: 17px;
 }
 
 .school-panel {
   width: 100%;
   text-align: center;
+}
+
+.summary-item .school-degrees ul {
+  text-align: left;
+  padding-left: 25px;
+  font-size: 15px;
 }
 
 .school-summary-container {
