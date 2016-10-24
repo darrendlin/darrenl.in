@@ -12,7 +12,7 @@ body {
 a {
   color: #00B7FF;
 }
-
+/*
 .navbar {
   list-style-type: none;
   margin: 4px;
@@ -48,9 +48,7 @@ a {
   font-variant: small-caps;
 }
 
-.navbar .navbar-separator {
-  /*border-left: 1px solid white;*/
-}
+*/
 
 .navbar .navbar-item a:hover {
   border-bottom: 3px solid #4B789A; 
@@ -87,7 +85,7 @@ a {
   text-align: center;
   vertical-align: top;
   margin: 50px;
-  width: 320px;
+  width: 310px;
 }
 
 .summary-item:last-of-type {
