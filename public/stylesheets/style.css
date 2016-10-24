@@ -1,0 +1,133 @@
+@font-face {
+  font-family: expressway;
+  src: url(./fonts/expressway-free.regular.ttf);
+}
+
+body {
+  padding: 20px 50px;
+  font: 14px Helvetica, Arial, sans-serif;
+  background-color: #DCDCDC;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 4px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #112C41;
+  font-size: 18px;
+}
+
+.navbar li {
+  float: left;
+  margin: 14px 16px;
+  padding: 10px;
+  text-align: center;
+  color: #85B7DE;
+  
+}
+
+.navbar li a {
+  display: block;
+  padding-bottom: 5px;
+  color: #85B7DE;
+  text-decoration: none;
+}
+
+.navbar .navbar-item {
+
+}
+
+.navbar .navbar-category {
+  font-size: 25px;
+  font-family: expressway;
+  font-variant: small-caps;
+}
+
+.navbar .navbar-separator {
+  /*border-left: 1px solid white;*/
+}
+
+.navbar .navbar-item a:hover {
+  border-bottom: 3px solid #4B789A; 
+}
+
+.navbar .active a {
+  border-bottom: 3px solid #85B7DE;
+}
+
+.pagetitle {
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro img {
+  width: 160px;
+  height: auto;
+}
+
+.summary-panel {
+  width: 100%;
+  text-align: center;
+}
+
+.summary-item:first-of-type {
+  margin-left: 100px;
+}
+
+.summary-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin: 50px;
+}
+
+.summary-item:last-of-type {
+  margin-right: 100px;
+}
+
+.summary-item img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.summary-item .school-degrees ul {
+  text-align: left;
+}
+
+.school-panel {
+  width: 100%;
+  text-align: center;
+}
+
+.school-summary-container {
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  width: 800px;
+}
+
+.school-logo {
+  display: inline-block;
+}
+
+.school-logo img {
+  width: 400px;
+  height: auto;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}

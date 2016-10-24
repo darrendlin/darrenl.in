@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  div.pagetitle
+    h1= title
+  div.summary-panel
+    each school in schools
+      div.summary-item
+        div.school-years #{school.years}
+        div.shcool-seal
+          img(src="#{school.seal}")
+        div.school-name #{school.name}
+        div.school-location #{school.location}
+        div.school-degrees
+          ul
+            each degree in school.degrees
+              li #{degree}
+  each school in schools
+    - if (school.showSummary === true) {
+    div.school-panel
+      div.school-summary-container
+        div.school-title
+          h2 #{school.name} | #{school.location}
+        div.school-summary
+          p #{school.summary}
+      div.school-logo
+        img(src="#{school.logo}")
+    - }
