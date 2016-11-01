@@ -298,11 +298,11 @@ var calc = {
     3-4: +1,
     5:   +2
     */
-    weapon_weight: 0.2725,
-    armor_weight: 0.2061,
-    gloves_weight: 0.185,
-    boots_weight: 0.184,
-    belt_weight: 0.028,
+    weapon_weight: 0.2795,
+    armor_weight: 0.2091,
+    gloves_weight: 0.205,
+    boots_weight: 0.19,
+    belt_weight: 0.02999,
 
     /*
     Accessories Set Bonus:
@@ -310,29 +310,43 @@ var calc = {
     3-4: +1,
     5:   +2
     */
-    necklace_weight: 0.028,
-    earring_weight: 0.028,
-    ring_weight: 0.028,
+    necklace_weight: 0.02999,
+    earring_weight: 0.02999,
+    ring_weight: 0.02999,
 
     /* Other (no set bonus) */
-    brooch_weight: 0.028,
-    innerwear_weight: 0.0136,
+    brooch_weight: 0.02999,
+    innerwear_weight: 0.0206,
 
     calculate: function(weapon, armor, gloves, boots, belt, main_set, innerwear, brooch, necklace, earring1, earring2, ring1, ring2, accessories_set) {
-        main = Math.round(weapon * this.weapon_weight) +
-            Math.round(armor * this.armor_weight) +
-            Math.round(gloves * this.gloves_weight) +
-            Math.round(boots * this.boots_weight) +
-            Math.round(belt * this.belt_weight) +
-            main_set;
-        accessories = Math.round(necklace * this.necklace_weight) +
-            Math.round(earring1 * this.earring_weight) +
-            Math.round(earring2 * this.earring_weight) +
-            Math.round(ring1 * this.ring_weight) +
-            Math.round(ring2 * this.ring_weight) +
-            accessories_set;
-        other = Math.round(innerwear * this.innerwear_weight) +
-            Math.round(brooch * this.brooch_weight);
+        // main = Math.round(weapon * this.weapon_weight) +
+        //     Math.round(armor * this.armor_weight) +
+        //     Math.round(gloves * this.gloves_weight) +
+        //     Math.round(boots * this.boots_weight) +
+        //     Math.round(belt * this.belt_weight) +
+        //     main_set;
+        // accessories = Math.round(necklace * this.necklace_weight) +
+        //     Math.round(earring1 * this.earring_weight) +
+        //     Math.round(earring2 * this.earring_weight) +
+        //     Math.round(ring1 * this.ring_weight) +
+        //     Math.round(ring2 * this.ring_weight) +
+        //     accessories_set;
+        // other = Math.round(innerwear * this.innerwear_weight) +
+        //     Math.round(brooch * this.brooch_weight);
+        main = Math.round(weapon * this.weapon_weight +
+                          armor * this.armor_weight +
+                          gloves * this.gloves_weight +
+                          boots * this.boots_weight +
+                          belt * this.belt_weight) +
+                          main_set;
+        accessories = Math.round(necklace * this.necklace_weight +
+                                 earring1 * this.earring_weight +
+                                 earring2 * this.earring_weight +
+                                 ring1 * this.ring_weight +
+                                 ring2 * this.ring_weight) +
+                                 accessories_set;
+        other = Math.round(innerwear * this.innerwear_weight +
+                           brooch * this.brooch_weight);
         return main + accessories + other;
     }
 };
