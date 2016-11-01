@@ -1,5 +1,5 @@
 doctype html
-html
+html(ng-app='darrenl.in')
   head
     title= 'Darren Lin - ' + title
     link(rel='stylesheet', href='/bootstrap-3.3.7-dist/css/bootstrap.min.css')
@@ -8,6 +8,14 @@ html
 
     script(src='/javascripts/jquery-3.1.1.min.js')
     script(src='/bootstrap-3.3.7-dist/js/bootstrap.min.js')
+
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js')
+
+    script(src='/javascripts/app.js')
+
     block head
   body
     include navbar

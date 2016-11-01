@@ -3,10 +3,19 @@ extends layout
 block content
   div.pagetitle
     h1= title
-  div.summary-panel
-    div.btn-group
-      button.btn.btn-default.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Weapon
-        span.caret
-      ul.dropdown-menu
-        li
-          a(href='#') hi
+  div.summary-panel(ng-controller='iLevelCalcController')   
+    each slot in items
+      span #{slot.name}
+      select.form-control(ng-model='slots.Weapon.name')
+        each piece in slot.items
+          option #{piece.name} (#{piece.ilevel})
+
+    | weapon: {{slots.Weapon.name}}
+    br
+    | slots: {{slots.Weapon.ilevel}}
+
+    br
+
+    | calc: #{calc.calculate(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)}
+
+  script(src='../javascripts/ilevelcalc/iLevelCalcController.js')
